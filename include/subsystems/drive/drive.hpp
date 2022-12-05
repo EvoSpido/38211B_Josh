@@ -1,0 +1,7 @@
+/////////////////////////////////
+//DRIVER CONTROL
+/////////////////////////////////
+
+void setDrive(int left, int right);
+void driveInit();
+void drive();
