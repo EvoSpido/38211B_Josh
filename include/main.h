@@ -43,7 +43,7 @@
  */
 #include "subsystems/match_timer.hpp"
 
-#include "subsystems/autonomous/auto_winpoint.hpp"
+#include "subsystems/autonomous/autos.hpp"
 
 #include "subsystems/drive/drive.hpp"
 #include "subsystems/drive/odom.hpp"

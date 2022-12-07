@@ -1,7 +1,7 @@
 {
   "py/object": "pros.conductor.project.Project",
   "py/state": {
-    "project_name": "38211B_Josh",
+    "project_name": "Josh",
     "target": "v5",
     "templates": {
       "kernel": {
@@ -309,8 +309,8 @@
       }
     },
     "upload_options": {
-      "description": "yo ",
-      "icon": "power"
+      "description": "Made with PROS",
+      "icon": "pizza"
     }
   }
 }

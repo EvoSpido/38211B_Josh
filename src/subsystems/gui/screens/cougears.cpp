@@ -21,32 +21,37 @@ void cougearsScreen() {
     lv_label_set_long_mode(labelCougears, LV_LABEL_LONG_BREAK);
     lv_label_set_align(labelCougears, LV_LABEL_ALIGN_CENTER);
     lv_obj_set_width(labelCougears, 480);
-    lv_obj_align(labelCougears, NULL, LV_ALIGN_CENTER, 0, -100);
+    lv_obj_align(labelCougears, NULL, LV_ALIGN_CENTER, 80, 105);
     
 
-    if(tabToggled == 1) { //Match
+    if(tabToggled == 1) { //Match -- autoSelected 1-5
 
         uint16_t btnid = lv_btnm_get_toggled(scrMatchBtnm);
 
         switch (btnid) {
             
             case 0:
+                autoSelected = 1;
                 lv_label_set_text(labelCougears, "AUTO SELECTED: L Full AWP");
                 controller.set_text(2, 6, "L Full AWP");
             break;
             case 1:
+                autoSelected = 2;
                 lv_label_set_text(labelCougears, "AUTO SELECTED: R Full AWP");
                 controller.set_text(2, 6, "R Full AWP");
             break;
             case 2:
+                autoSelected = 3;
                 lv_label_set_text(labelCougears, "AUTO SELECTED: Spin Roller");
                 controller.set_text(2, 9, "Roller");
             break;
             case 3:
+                autoSelected = 4;
                 lv_label_set_text(labelCougears, "AUTO SELECTED: L 1/2 AWP");
                 controller.set_text(2, 6, "L 1/2 AWP");
             break;
             case 4:
+                autoSelected = 5;
                 lv_label_set_text(labelCougears, "AUTO SELECTED: R 1/2 AWP");
                 controller.set_text(2, 6, "R 1/2 AWP");
             break;
@@ -57,17 +62,19 @@ void cougearsScreen() {
         }
     }
 
-    if(tabToggled == 2) { //Skills
+    if(tabToggled == 2) { //Skills -- autoSelected 6 and 7
 
         uint16_t btnid = lv_btnm_get_toggled(scrSkillsBtnm);
 
         switch (btnid) {
 
             case 0:
+                autoSelected = 6;
                 lv_label_set_text(labelCougears, "AUTO SELECTED: skills route 1");
                 controller.set_text(2, 6, "skillsroute1");
             break;
             case 1:
+                autoSelected = 7;
                 lv_label_set_text(labelCougears, "AUTO SELECTED: skills route 2");
                 controller.set_text(2, 6, "skillsroute2");
             break;

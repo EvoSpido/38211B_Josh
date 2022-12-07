@@ -70,7 +70,7 @@ void driveInit() {
     inertial.reset();
     setDiagText(8, "IMU IS CALIBRATING...");
     setDiagText(9, "DO NOT TOUCH!!");
-    pros::delay(2500);
+    pros::delay(3000);
     setDiagText(8, "");
     setDiagText(9, "");
 }

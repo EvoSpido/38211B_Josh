@@ -4,6 +4,10 @@
 #include "pros/misc.hpp"
 #include <cstdio>
 
+//SPAGHETTI CODE GALORE
+
+int autoSelected;
+
 /**
  * Runs initialization code. This occurs as soon as the program is started.
  *
@@ -15,11 +19,6 @@ void initialize() {
     diagScreen();
     driveInit();
     pros::Task odomTask(algorithmMain);
-    
-
-
-    
-
 }
 
 /**
@@ -68,15 +67,42 @@ void competition_initialize() {
  * from where it left off.
  */
 void autonomous() {
-    if (pros::competition::is_connected()) {
 
-        lv_obj_clean(lv_layer_top());
-        if (lv_btn_get_state(scrDiagDispBtn) == 0) {
-            cougearsScreen();
-        }
+    switch (autoSelected) {
+
+        case 1:
+            LFullAWP();
+        break;
+        case 2:
+            RFullAWP();
+        break;
+        case 3:
+            SpinRoller();
+        break;
+        case 4:
+            LHalfAWP();
+        break;
+        case 5:
+            RHalfAWP();
+        break;
+        case 6:
+            Skills1();
+        break;
+        case 7:
+            Skills2();
+        break;
     }
 
-    //matchTimer(15);
+    lv_obj_clean(lv_layer_top());
+    if (lv_btn_get_state(scrDiagDispBtn) == 0) {
+    
+        cougearsScreen();
+    } else if (lv_btn_get_state(scrDiagDispBtn) == 2) {
+        
+        dispAutoDiag();
+    }
+    matchTimer(15);
+    
 }
 
 /**
@@ -95,6 +121,11 @@ void autonomous() {
 
 void opcontrol() {
 
+
+    pros::Task driveTask(drive);
+    pros::Task intakeTask(spinIntake);
+    pros::Task slingshotTask(slingshotControl);
+
     if (pros::competition::is_connected()) {
 
         lv_obj_clean(lv_layer_top());
@@ -105,13 +136,8 @@ void opcontrol() {
             
             dispAutoDiag();
         }
-        //matchTimer(105);
+        matchTimer(105);
     } 
-
-    pros::Task driveTask(drive);
-    pros::Task intakeTask(spinIntake);
-    pros::Task slingshotTask(slingshotControl);
-
     
     //enablePID = false;
     //pros::delay(1500);
