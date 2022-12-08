@@ -21,9 +21,10 @@ extern Motor leftBack; //3 :3
 extern Motor rightBack; //4 :4
 extern Motor_Group rightChassis;
 
-extern Motor intake; //5 :10
 extern Motor slingshot1; //6 :6
 extern Motor slingshot2; //7 :7
+extern Motor roller; //8 :9
+extern Motor intake; //5 :10
 
 extern ADIEncoder leftEncoder; //:A+B 
 extern ADIEncoder rightEncoder; //:C+D 

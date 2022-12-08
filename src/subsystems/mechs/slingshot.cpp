@@ -20,7 +20,7 @@ void slingshotControl() {
             Xpressed = false;
             slingshot1.move(127);
             slingshot2.move(127);
-            pros::delay(10);
+            pros::delay(50);
             slingshot1.brake();
             slingshot2.brake();
         }
