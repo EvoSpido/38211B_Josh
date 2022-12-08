@@ -8,7 +8,6 @@ double dL = 3.125;
 double dR = 3.125; 
 double dB = 5.625; 
 
-
 // Variables decalared outside of function so they can be displayed to the screen
 double currentOrientation = 0;
 double currentX = 0;

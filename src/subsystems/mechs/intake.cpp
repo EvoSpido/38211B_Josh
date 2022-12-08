@@ -28,12 +28,12 @@ void spinIntake() {
         //moves intake in the direction that is toggled by the driver -- if no buttons are toggled intake is automatically stopped
         if(rightPressed) {
 
-            intake.move(-100); // Changed to 100 from 85 - Kaun's request
+            intake.move(-117); // Changed to 100 from 85 - Kaun's request
             
             setDiagText(9, "fwd");
         } else if(downPressed){
 
-            intake.move(100); // Changed to -100 from -85 - Kaun's request
+            intake.move(117); // Changed to -100 from -85 - Kaun's request
             
             setDiagText(9, "rev");
         } else {
