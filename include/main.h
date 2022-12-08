@@ -37,6 +37,7 @@
 #include "api.h"
 #include "display/lvgl.h"
 #include "okapi/api.hpp"
+#include "ARMS/api.h"
 
 /**
  * You should add more #includes here

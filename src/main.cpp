@@ -1,8 +1,5 @@
 #include "main.h"
-#include "display/lv_core/lv_obj.h"
-#include "display/lv_objx/lv_btn.h"
-#include "pros/misc.hpp"
-#include <cstdio>
+#include "ARMS/config.h"
 
 //SPAGHETTI CODE GALORE
 
@@ -18,7 +15,11 @@ void initialize() {
     stylesInit();
     diagScreen();
     driveInit();
-    pros::Task odomTask(algorithmMain);
+
+    arms::init();
+
+    //finish after Vaughn
+    //pros::Task odomTask(algorithmMain);
 }
 
 /**
