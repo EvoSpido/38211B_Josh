@@ -61,6 +61,7 @@
 
 #include "subsystems/mechs/intake.hpp"
 #include "subsystems/mechs/slingshot.hpp"
+#include "subsystems/mechs/roller.hpp"
 
 #include "globals.hpp"
 

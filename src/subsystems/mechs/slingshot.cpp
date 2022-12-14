@@ -3,8 +3,6 @@
 void slingshotControl() {
 
     static bool Xpressed = false;
-    // one spin one way one spin other way idk what kauns talking about
-    // X is supposed to spin the shaft infinitely until pressed again, and then B is supposed to spin the shaft the other way for a moment 
     
     while (true) {
 

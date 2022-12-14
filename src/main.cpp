@@ -126,6 +126,7 @@ void opcontrol() {
     pros::Task driveTask(drive);
     pros::Task intakeTask(spinIntake);
     pros::Task slingshotTask(slingshotControl);
+    pros::Task rollerTask(rollerControl);
 
     if (pros::competition::is_connected()) {
 
