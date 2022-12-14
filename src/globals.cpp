@@ -22,6 +22,7 @@ Imu inertial (5);
 
 Motor slingshot1(6, E_MOTOR_GEARSET_18, true, E_MOTOR_ENCODER_COUNTS); //6
 Motor slingshot2(7, E_MOTOR_GEARSET_18, false, E_MOTOR_ENCODER_COUNTS); //7
+Motor roller(9, E_MOTOR_GEARSET_06, false, E_MOTOR_ENCODER_DEGREES); //8
 Motor intake(10, E_MOTOR_GEARSET_06, true, E_MOTOR_ENCODER_DEGREES); //5
 
 ADIEncoder leftEncoder(1, 2, false); //:A+B 

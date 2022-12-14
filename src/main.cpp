@@ -122,7 +122,6 @@ void autonomous() {
 
 void opcontrol() {
 
-
     pros::Task driveTask(drive);
     pros::Task intakeTask(spinIntake);
     pros::Task slingshotTask(slingshotControl);
