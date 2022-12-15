@@ -15,7 +15,6 @@ void initialize() {
     stylesInit();
     diagScreen();
     driveInit();
-
     arms::init();
 
     //finish after Vaughn
@@ -126,6 +125,7 @@ void opcontrol() {
     pros::Task intakeTask(spinIntake);
     pros::Task slingshotTask(slingshotControl);
     pros::Task rollerTask(rollerControl);
+    pros::Task endgameTask(endgameControl);
 
     if (pros::competition::is_connected()) {
 

@@ -13,6 +13,9 @@ using namespace pros;
 //controller
 extern Controller controller;
 
+// # means number of motor (MAX 8 MOTORS)
+// ":#" means port number
+
 //drivetrain motors
 extern Motor leftFront; //1 :1
 extern Motor rightFront; //2 :2
@@ -32,11 +35,15 @@ extern ADIEncoder backEncoder; //:E+F
 
 extern Imu inertial; //:5
 
+extern ADIDigitalOut endgame1; //:G
+extern ADIDigitalOut endgame2; //:H
+
 /////////////////////////////////
 //GLOBAL VARIABLES
 /////////////////////////////////
 
 extern bool enablePID; //drive.cpp
 extern bool resetMotors; //drive.cpp
+extern bool rejectDisks; //slingshot.cpp
 
 extern int autoSelected; //gui.cpp

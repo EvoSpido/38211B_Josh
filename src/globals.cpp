@@ -10,6 +10,9 @@ using namespace pros;
 //controller
 Controller controller(pros::E_CONTROLLER_MASTER);
 
+// # means number of motor (MAX 8 MOTORS)
+// ":#" means port number
+
 //drivetrain motors
 Motor leftFront(1, E_MOTOR_GEARSET_06, true, E_MOTOR_ENCODER_DEGREES); //1
 Motor leftBack(2, E_MOTOR_GEARSET_06, true, E_MOTOR_ENCODER_DEGREES); //2
@@ -28,3 +31,7 @@ Motor intake(10, E_MOTOR_GEARSET_06, true, E_MOTOR_ENCODER_DEGREES); //5
 ADIEncoder leftEncoder(1, 2, false); //:A+B 
 ADIEncoder rightEncoder(3, 4, true); //:C+D 
 ADIEncoder backEncoder(5, 6, false);  //:E+F 
+
+ADIDigitalOut endgame1(7, false); //:G
+ADIDigitalOut endgame2(8, false); //:H
+

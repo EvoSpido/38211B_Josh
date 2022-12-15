@@ -1,41 +1,30 @@
 #include "main.h"
+#include "pros/motors.h"
+
+bool rejectDisks = false;
 
 void slingshotControl() {
 
-    static bool Xpressed = false;
-    
+
     while (true) {
 
         //toggle functions
-        if(controller.get_digital_new_press(E_CONTROLLER_DIGITAL_X)) {
+        if(controller.get_digital(E_CONTROLLER_DIGITAL_R2)) {
             
-            Xpressed = !Xpressed;
-            
-        }
-
-        if(controller.get_digital(E_CONTROLLER_DIGITAL_B)) {
-            
-            Xpressed = false;
+            rejectDisks = true;
+            intake.move(117);
             slingshot1.move(127);
             slingshot2.move(127);
-            pros::delay(50);
-            slingshot1.brake();
-            slingshot2.brake();
-        }
-
-        if(Xpressed) {
-
+            pros::delay(300); //delay time between firing and priming
             slingshot1.move(-127);
             slingshot2.move(-127);
-        } else {
-
+            pros::delay(3500); //delay time for how long it should prime
             slingshot1.brake();
             slingshot2.brake();
-
+            rejectDisks = false;
         }
+        
         pros::delay(10);
     }
-
-
 
 }

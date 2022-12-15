@@ -1,37 +1,36 @@
 #include "main.h"
 
 void spinIntake() {
-    static bool rightPressed;
-    static bool downPressed;
+    static bool L2Pressed;
+    static bool L1Pressed;
 
     while(true) {   
 
-        //bypasses controller buttons if controller is not connected to the brain
-        if(!controller.is_connected()) {
-            rightPressed = true;
-        }  
-
+        
         //toggle functions
-        if(controller.get_digital_new_press(E_CONTROLLER_DIGITAL_RIGHT)) {
+        if(controller.get_digital_new_press(E_CONTROLLER_DIGITAL_L2)) {
             
-            rightPressed = !rightPressed;
-            downPressed = false;
+            L2Pressed = !L2Pressed;
+            L1Pressed = false;
         }
-        if(controller.get_digital_new_press(E_CONTROLLER_DIGITAL_DOWN)) {
+        if(controller.get_digital_new_press(E_CONTROLLER_DIGITAL_L1)) {
             
-            downPressed = !downPressed;
-            rightPressed = false;
+            L1Pressed = !L1Pressed;
+            L2Pressed = false;
         }
 
         
 
         //moves intake in the direction that is toggled by the driver -- if no buttons are toggled intake is automatically stopped
-        if(rightPressed) {
+        if (rejectDisks){
+        
+            setDiagText(9, "stop");
+        } else if(L2Pressed) {
 
             intake.move(-117); // Changed to 100 from 85 - Kaun's request
             
             setDiagText(9, "fwd");
-        } else if(downPressed){
+        } else if(L1Pressed){
 
             intake.move(117); // Changed to -100 from -85 - Kaun's request
             
@@ -39,7 +38,6 @@ void spinIntake() {
         } else {
 
             intake.brake();
-        
             setDiagText(9, "stop");
         }
         
