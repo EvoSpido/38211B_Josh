@@ -3,24 +3,23 @@
 
 void rollerControl() {
 
-    static bool XPressed;
+    static bool R1Pressed;
 
 
     while(true) {   
 
         
         //toggle functions
-        if(controller.get_digital_new_press(E_CONTROLLER_DIGITAL_X)) {
+        if(controller.get_digital_new_press(E_CONTROLLER_DIGITAL_R1)) {
             
-            XPressed = !XPressed;
+            R1Pressed = !R1Pressed;
         }
 
+        if(R1Pressed) {
 
-        if(XPressed) {
-
-            roller.move(-117);
+            roller.move(117);
             
-        } else if(!XPressed){
+        } else if(!R1Pressed){
 
             roller.brake();
         } 
