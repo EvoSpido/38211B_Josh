@@ -37,6 +37,11 @@ void drive() {
 
         setDrive(left, right);
 
+        if(controller.get_digital(pros::E_CONTROLLER_DIGITAL_DOWN) && controller.get_digital(pros::E_CONTROLLER_DIGITAL_RIGHT) && controller.get_digital(pros::E_CONTROLLER_DIGITAL_Y) && controller.get_digital(pros::E_CONTROLLER_DIGITAL_B)) {
+
+            endgame.set_value('4095');
+        }
+
         char powerstr[32];
         snprintf(powerstr, 32, "Power: %i", power);
         setDiagText(4, powerstr);

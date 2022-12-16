@@ -32,6 +32,5 @@ ADIEncoder leftEncoder(1, 2, false); //:A+B
 ADIEncoder rightEncoder(3, 4, true); //:C+D 
 ADIEncoder backEncoder(5, 6, false);  //:E+F 
 
-ADIDigitalOut endgame1(7, false); //:G
-ADIDigitalOut endgame2(8, false); //:H
+ADIDigitalOut endgame(8, false); //:H
 

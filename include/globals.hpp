@@ -35,8 +35,7 @@ extern ADIEncoder backEncoder; //:E+F
 
 extern Imu inertial; //:5
 
-extern ADIDigitalOut endgame1; //:G
-extern ADIDigitalOut endgame2; //:H
+extern ADIDigitalOut endgame; //:H
 
 /////////////////////////////////
 //GLOBAL VARIABLES
