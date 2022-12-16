@@ -10,7 +10,7 @@ void rollerControl() {
 
         
         //toggle functions
-        if(controller.get_digital(E_CONTROLLER_DIGITAL_X)) {
+        if(controller.get_digital_new_press(E_CONTROLLER_DIGITAL_X)) {
             
             XPressed = !XPressed;
         }
