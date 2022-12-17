@@ -22,10 +22,7 @@ void spinIntake() {
         
 
         //moves intake in the direction that is toggled by the driver -- if no buttons are toggled intake is automatically stopped
-        if (rejectDisks){
-        
-            setDiagText(9, "stop");
-        } else if(L2Pressed) {
+        if(L2Pressed) {
 
             intake.move(-117); // Changed to 100 from 85 - Kaun's request
             

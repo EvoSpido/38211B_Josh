@@ -17,7 +17,7 @@ void rollerControl() {
 
         if(R1Pressed) {
 
-            roller.move(117);
+            roller.move(70);
             
         } else if(!R1Pressed){
 
