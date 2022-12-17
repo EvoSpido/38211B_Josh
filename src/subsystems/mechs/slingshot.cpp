@@ -15,7 +15,7 @@ void slingshotControl() {
             intake.move(117);
             slingshot1.move(127);
             slingshot2.move(127);
-            pros::delay(300); //delay time between firing and priming
+            pros::delay(500); //delay time between firing and priming
             slingshot1.move(-127);
             slingshot2.move(-127);
             pros::delay(3500); //delay time for how long it should prime
