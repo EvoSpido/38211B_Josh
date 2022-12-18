@@ -14,11 +14,11 @@ Controller controller(pros::E_CONTROLLER_MASTER);
 // ":#" means port number
 
 //drivetrain motors
-Motor leftFront(1, E_MOTOR_GEARSET_06, true, E_MOTOR_ENCODER_DEGREES); //1
-Motor leftBack(2, E_MOTOR_GEARSET_06, true, E_MOTOR_ENCODER_DEGREES); //2
+Motor leftFront(1, E_MOTOR_GEARSET_06, true, pros::E_MOTOR_ENCODER_COUNTS); //1
+Motor leftBack(2, E_MOTOR_GEARSET_06, true, E_MOTOR_ENCODER_COUNTS); //2
 Motor_Group leftChassis({leftFront, leftBack});
-Motor rightFront(3, E_MOTOR_GEARSET_06, false, E_MOTOR_ENCODER_DEGREES); //3
-Motor rightBack(4, E_MOTOR_GEARSET_06, false, E_MOTOR_ENCODER_DEGREES); //4
+Motor rightFront(3, E_MOTOR_GEARSET_06, false, E_MOTOR_ENCODER_COUNTS); //3
+Motor rightBack(4, E_MOTOR_GEARSET_06, false, E_MOTOR_ENCODER_COUNTS); //4
 Motor_Group rightChassis({rightFront, rightBack});
 
 Imu inertial (5);

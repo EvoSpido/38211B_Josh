@@ -12,13 +12,13 @@ void slingshotControl() {
         if(controller.get_digital(E_CONTROLLER_DIGITAL_R2)) {
             
             rejectDisks = true;
-            intake.move(117);
+            intake.move(127);
             slingshot1.move(127);
             slingshot2.move(127);
             pros::delay(300); //delay time between firing and priming
             slingshot1.move(-127);
             slingshot2.move(-127);
-            pros::delay(3500); //delay time for how long it should prime
+            pros::delay(2500); //delay time for how long it should prime
             slingshot1.brake();
             slingshot2.brake();
             rejectDisks = false;

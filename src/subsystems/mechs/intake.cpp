@@ -27,12 +27,12 @@ void spinIntake() {
             setDiagText(9, "stop");
         } else if(L2Pressed) {
 
-            intake.move(-117); // Changed to 100 from 85 - Kaun's request
+            intake.move(-127); // Changed to 100 from 85 - Kaun's request
             
             setDiagText(9, "fwd");
         } else if(L1Pressed){
 
-            intake.move(117); // Changed to -100 from -85 - Kaun's request
+            intake.move(127); // Changed to -100 from -85 - Kaun's request
             
             setDiagText(9, "rev");
         } else {
