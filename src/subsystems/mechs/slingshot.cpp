@@ -1,7 +1,6 @@
 #include "main.h"
 #include "pros/motors.h"
 
-bool rejectDisks = false;
 
 void slingshotControl() {
 
@@ -15,13 +14,12 @@ void slingshotControl() {
             intake.move(127);
             slingshot1.move(127);
             slingshot2.move(127);
-            pros::delay(300); //delay time between firing and priming
+            pros::delay(500); //delay time between firing and priming
             slingshot1.move(-127);
             slingshot2.move(-127);
             pros::delay(2500); //delay time for how long it should prime
             slingshot1.brake();
             slingshot2.brake();
-            rejectDisks = false;
         }
         
         pros::delay(10);
