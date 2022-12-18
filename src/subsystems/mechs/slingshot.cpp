@@ -2,8 +2,9 @@
 #include "pros/motors.h"
 
 
-void slingshotControl() {
+bool rejectDisks = false;
 
+void slingshotControl() {
 
     while (true) {
 
